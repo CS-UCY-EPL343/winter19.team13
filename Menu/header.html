@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+<style>
+/*CSS-------------------------------------------------------------------*/
+
+
+
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+body{
+	background-color: #f2f2f2;
+}
+
+nav{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	min-height: 8vh;
+	background-color: #2c3e50;
+	font-family: 'Poppins', sans-serif;
+	position: fixed;
+	width: 100%;
+	z-index: 100;
+}
+
+nav .logo{
+	/*color: rgb(226,226,226);	
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	font-size: 20px;*/
+	width: 80px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+
+}
+
+nav .logo img{
+	width: 100%;
+	height: auto;
+}
+
+.nav-links{
+	display: flex;
+	justify-content: space-around;
+	width: 50%;
+	margin: 0; 
+}
+
+.nav-links button.btn{
+	margin: -8px 0;
+    padding: .375rem 1.75rem;
+}
+
+.nav-links a{
+	color: rgb(226,226,226);
+	text-decoration: none;
+	letter-spacing: 3px;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.nav-links a:hover{
+
+	color: rgb(255, 112, 77);
+
+}
+
+.nav-links li{
+	list-style: none;
+}
+
+.burger div{
+	width: 25px;
+	height: 3px;
+	background-color: rgb(266,266,266);
+	margin: 5px;
+	transition: all 0.3s ease;
+}
+
+.burger{
+	display: none;
+	cursor: pointer;
+}
+
+form.login label{
+	font-size: 20px;
+}
+
+.signup a{
+	color: #007bff !important;
+    text-decoration-line: underline !important;
+    cursor: pointer;
+}
+
+div.signup{
+	width: 55%;
+}
+
+.main_body{
+	padding-top: 115px
+}
+
+
+/*Xeras contact us*/
+
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: #FA2B2B;
+  color: white;
+  padding: 15px 15px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #3B3434;
+}
+form.contact_form label{
+	font-size: 20px;
+}
+
+
+.header{
+  text-align: center;
+  font-size: 20px;
+  color: black;
+  padding-bottom: 20px;
+}
+
+
+
+.contact_red_warning{
+  font-size: 17px;
+  color:red;
+}
+
+.contact_btn{
+	margin-bottom: 70px;
+}
+
+
+
+
+/* About us */
+.about_container {
+  border-radius: 5px;
+  padding: 20px;
+  width:90%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 50px;
+
+}
+
+.about_header{
+  text-align: left;
+  font-size: 20px;
+  color: black;
+  padding-bottom: 5px;
+}
+
+.about_us_left{
+  width:50%;
+}
+
+.about_hours{
+  padding-bottom:10px;
+  font-size:16px;
+  
+}
+
+.about_img img{
+	width: 100%;
+	height: auto;
+}
+
+
+
+
+
+
+
+
+/*CSS-------------------------------------------------------------------*/
+</style>
+
+
+    <title>Baristro</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="css/mystyle.css">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+
+    <script src="js/myjavascript.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+   </head>
+  <body>
+
+    <nav>
+       <div class="logo">
+           <!-- <h4>The Nav</h4> -->
+          <a href="#">
+            <img src="images/logo.png"  />
+          </a>
+       </div>
+
+       <ul class="nav-links">
+           <li>
+               <a href="#">Menu</a>
+           </li>
+            <li>
+               <a href="#">Events</a>
+           </li>
+            <li>
+               <a href="contact_us.php">Contact Us</a>
+           </li>
+            <li>
+               <a href="about_us.php">About Us</a>
+           </li>
+
+           <li>
+              <button  class="btn" data-toggle="modal" data-target="#Basket">
+                <img src="images/cart_icon.svg"   />
+              </button>
+           </li>
+            <li>
+              <button id="login" onclick="AccountLogIn()" type="button" class="btn btn-outline-warning" data-toggle="modal" data-target="#LogInModal">Log in</button> <!-- data-toggle="modal" data-target="#LogInModal" -->
+           </li>
+
+
+       </ul>
+
+
+       <dir class="burger" onclick="navSlide()">
+           <div class="line1"></div>
+           <div class="line2"></div>
+           <div class="line3"></div>
+       </dir>
+
+    </nav>
+
+
+<!-- Modal Espresso Start-->
+    <div class="modal fade" id="EspressoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Espresso</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            
+            <form class="login">
+
+              <div class="form-group">
+                <label > Sugar: </label><br>
+                <input id="sugaridNS" type="radio" value="No Sugar" name="choosesugar"> No Sugar<br>
+		<input id="sugaridSS" type="radio" value="Some Sugar" name="choosesugar"> Some Sugar<br>
+		<input id="sugaridM" type="radio" value="Medium" name="choosesugar"> Medium<br>
+		<input id="sugaridS" type="radio" value="Sweet" name="choosesugar"> Sweet<br>
+              </div>
+
+              <div class="form-group">
+                <label ></i> Add Extra Shot: </label><br>
+                <input id="extrashotid" type="checkbox" name="extrashot" value="Extrashot"> Extra Espresso Shot +$0.50<br>
+              </div>
+
+            </form>
+
+          </div>
+          <div class="modal-footer">
+
+            <button type="button" style="width: 100%;" class="btn btn-lg btn-warning">Add to Cart</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- Modal Espresso End-->
+
+    <div class="main_body"></div>
+
