@@ -1,0 +1,26 @@
+<div class="modal fade" id="ReservationChooseModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+           <h5 class="modal-title" id="exampleModalLabel">Make A Reservation</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            
+            <form class="Login">
+	<button type="button" style="width: 100%;" class="btn btn-lg btn-warning">As a Guest</button>
+              
+            </form>
+
+          </div>
+          <div class="modal-footer">
+
+            <button type="button" style="width: 100%;" class="btn btn-lg btn-warning">As a User (Log In)</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+

@@ -1,0 +1,51 @@
+
+    <!-- Modal Reservation Guest -->
+    <div class="modal fade" id="ReservationGuestModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+           <h5 class="modal-title" id="exampleModalLabel">Make A Reservation as Guest</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            
+            <form class="Login">
+
+              <div class="form-group">
+                <label ><i class="fa fa-male fa-2x"></i> Name: </label>
+                <input id="ReservationName" type="text" name="" class="form-control" >
+              </div>
+
+	      <div class="form-group">
+                <label ><i class="fa fa-clock-o fa-2x"></i> Time: </label>
+                <input id="ReservationTime" type="time" name="" class="form-control" >
+              </div>
+
+	     <div class="form-group">
+                <label ><i class="fa fa-mobile-phone fa-2x"></i> Telephone Number: </label>
+                <input id="ReservationPhone" type="text" name="" class="form-control">
+              </div>
+
+              <div class="form-group">
+                <label ><i class="fa fa-group fa-2x"></i> Number of People: </label>
+                <input id="ReservationPeiple" type="number" name="" class="form-control" >
+              </div>
+
+            </form>
+
+          </div>
+          <div class="modal-footer">
+
+<!--
+            <div class="signup">
+              <a onclick="createAccount()">Create Account</a> <!-- data-dismiss="modal"  
+            </div>
+-->
+            <button type="button" style="width: 100%;" class="btn btn-lg btn-warning">Confirm Reservation</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
