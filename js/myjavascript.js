@@ -90,6 +90,14 @@ function createAccount(){
 	$("#RegisterModal").modal("toggle");
 }
 
+
+function createAccountFooter(){
+
+	clearRegister();
+
+	$("#RegisterModal").modal("toggle");
+}
+
 function clearRegister(){
 	document.querySelector('#RegisterEmail').value="";
 	document.querySelector('#RegisterFirst').value="";
