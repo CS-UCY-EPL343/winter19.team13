@@ -54,14 +54,67 @@ body {
 .panel{
 	border: 3px solid brown
 }
-.container{
+.mycontainer{
 	width: 90%;
+  margin: auto;
 }
 	
 
   </style>
+
+  <style>
+.menubackground{
+  padding: 0.3rem 1rem;
+  background-image: url("wood.png");
+  background-size:cover;
+    border-block-color: #584141;
+}
+.modalbodystyle{
+  background-color: #584141;
+}
+</style>
+
 </head>
 <body>
+
+  <!-- Modal Reservation Choose -->
+    <div class="modal fade" id="MenupopupModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header menubackground">
+           <h5 class="modal-title" id="exampleModalLabel"><b>Name</b></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body modalbodystyle">
+            <div class="container">    
+      <div class="row">
+        <div class="col-sm-6">
+        <div>
+          <img src="drink.jpg" class="img-responsive rounded border border-dark" style="width:100%" alt="Image">
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div>
+          <p> 
+            Description xxx xxxxxx xxxxx xx x x x x <br/>-xxxx <br/>-xxxxx
+          </p>
+        </div>
+      </div>
+        </div>  
+    <div class="row">
+        <div class="col-sm-6">  
+      </div>
+      <div class="col-sm-6">
+        <p style="text-align: right;">$9.99</p>
+      </div>
+        </div>  
+           </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
 <div class="jumbotron">
   <div class="container text-center">
@@ -71,14 +124,14 @@ body {
 </div>
 <br>
 
-<div class="container">    
+<div class="mycontainer">    
   <div class="row">
     <div class="col-sm-3">
-      <div class="panel panel-primary">
+      <a class="panel panel-primary">
         <div class="panel-heading">GINGI LEMON</div>
         <div class="panel-body"><img src="drink.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
 
-      </div>
+      </a>
     </div>
     <div class="col-sm-3"> 
       <div class="panel panel-primary">
