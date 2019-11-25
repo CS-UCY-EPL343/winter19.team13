@@ -1,5 +1,66 @@
 var prices_array = new Array(2.50, 1.50, 2.0, 3.5);
 
+function dine_in_menu(){
+
+	let take_away_menu = document.querySelector("#take_away_id");
+	let dine_in_menu = document.querySelector("#dine_in_id");
+	document.body.style.backgroundColor = "#1a1a1a";
+	take_away_menu.style.display="none";
+	dine_in_menu.style.display="block";
+}
+
+function take_away_menu(){
+
+	let take_away_menu = document.querySelector("#take_away_id");
+	let dine_in_menu = document.querySelector("#dine_in_id");
+	document.body.style.backgroundColor = "#808080";
+	take_away_menu.style.display="block";
+	dine_in_menu.style.display="none";
+
+
+}
+
+function menuModal_delivery(x){
+
+$("#EspressoModal").modal("toggle");
+
+var matches_menu = document.querySelectorAll("#take_away_id div.panel-heading");
+// matches_menu_image = document.querySelectorAll("#take_away_id div.panel-body img");
+
+
+var modal_menu = document.querySelector("#EspressoModal h5.modal-title");
+//var modal_menu_image = document.querySelector("#EspressoModal div.modal-body-image img");
+
+//console.log(matches_menu_image[x]);
+
+modal_menu.innerHTML = matches_menu[x].innerHTML;
+//modal_menu_image.src= matches_menu_image[x].src;
+
+
+}
+
+function menuModal(x){
+
+$("#MenupopupModal").modal("toggle");
+
+var matches_menu = document.querySelectorAll("#dine_in_id div.panel-heading");
+var matches_menu_image = document.querySelectorAll("#dine_in_id div.panel-body img");
+
+
+var modal_menu = document.querySelector("#MenupopupModal h5.modal-title");
+var modal_menu_image = document.querySelector("#MenupopupModal div.modal-body-image img");
+
+//console.log(matches_menu_image[x]);
+
+modal_menu.innerHTML = matches_menu[x].innerHTML;
+modal_menu_image.src= matches_menu_image[x].src;
+
+
+}
+
+
+
+
 function cart_plus(x){
 
 
