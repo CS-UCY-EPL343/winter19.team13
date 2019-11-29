@@ -20,6 +20,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
+    
+
    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
   </head>
@@ -28,7 +30,7 @@
     <nav>
        <div class="logo">
            <!-- <h4>The Nav</h4> -->
-          <a href="#">
+          <a href="index.php">
             <img src="images/logo.png"  />
           </a>
        </div>
@@ -38,7 +40,7 @@
                <a href="menu.php">Menu</a>
            </li>
             <li>
-               <a href="#">Events</a>
+               <a href="events.php">Events</a>
            </li>
             <li>
                <a href="contact_us.php">Contact Us</a>
@@ -131,17 +133,17 @@
               </div>
 
                <div class="form-group">
-                <label ><i class="fa fa-envelope fa-2x"></i> First Name: </label>
+                <label ><i class="fa fa-user fa-2x"></i> First Name: </label>
                 <input id="RegisterFirst" type="text" name="" class="form-control" >
               </div>
 
                <div class="form-group">
-                <label ><i class="fa fa-envelope fa-2x"></i> Last Name: </label>
+                <label ><i class="fa fa-user fa-2x"></i> Last Name: </label>
                 <input id="RegisterLast" type="text" name="" class="form-control" >
               </div>
 
                <div class="form-group">
-                <label ><i class="fa fa-envelope fa-2x"></i> Phone: </label>
+                <label ><i class="fa fa-phone fa-2x"></i> Phone: </label>
                 <input id="RegisterPhone" type="text" name="" class="form-control" >
               </div>
 
@@ -189,17 +191,17 @@
               
               <div class="row item">
                 <div class="col-md-1">
-                  <button type="button" class="close" aria-label="Close">
+                  <button onclick="delete_item(0)" type="button" class="close" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
                 <div class="col-md-3">
-                  <img src="images/coffee.jpg" />
+                  <img src="images/delivery_drink_8.jpg" />
                 </div>
                 <div class="col-md-3">
                   <ul >
-                    <li class="product_title"> Capuchino</li>
-                    <li> milk,sugar</li>
+                    <li class="product_title">Orange Juice</li>
+                    <li></li>
                     
                   </ul>
                 </div>
@@ -221,17 +223,17 @@
 
               <div class="row item">
                 <div class="col-md-1">
-                  <button type="button" class="close" aria-label="Close">
+                  <button onclick="delete_item(1)" type="button" class="close" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
                 <div class="col-md-3">
-                  <img src="images/coffee.jpg" />
+                  <img src="images/delivery_drink_4.jpg" />
                 </div>
                 <div class="col-md-3">
                   <ul >
-                    <li class="product_title"> Capuchino</li>
-                    <li> milk,sugar</li>
+                    <li class="product_title">Americano</li>
+                    <li>no milk,sugar</li>
                     
                   </ul>
                 </div>
@@ -253,7 +255,7 @@
 
               <div class="row item">
                 <div class="col-md-1">
-                  <button type="button" class="close" aria-label="Close">
+                  <button onclick="delete_item(2)" type="button" class="close" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
@@ -285,17 +287,17 @@
 
               <div class="row item">
                 <div class="col-md-1">
-                  <button type="button" class="close" aria-label="Close">
+                  <button onclick="delete_item(3)" type="button" class="close" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
                 <div class="col-md-3">
-                  <img src="images/coffee.jpg" />
+                  <img src="images/delivery_food_6.jpg" />
                 </div>
                 <div class="col-md-3">
                   <ul >
-                    <li class="product_title"> Capuchino</li>
-                    <li> milk,sugar</li>
+                    <li class="product_title">Toast</li>
+                    <li>Extra Bacon</li>
                     
                   </ul>
                 </div>
@@ -322,7 +324,165 @@
               <span class="total_price">Total: 9.5&euro;</span> <!-- data-dismiss="modal"  -->
             </div>
 
-            <button type="button" style="width: 40%;" class="btn btn-lg btn-warning">Check Out</button>
+            <button type="button" style="width: 40%;" onclick="checkout()" class="btn btn-lg btn-warning">Check Out</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!--  Create Order  -->
+
+    <!-- Modal Reservation Choose -->
+    <div class="modal fade" id="OrderChooseModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+           <h5 class="modal-title" id="exampleModalLabel">Make an Order</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            
+            <form class="Ordering">
+  <button type="button" style="width: 100%;" class="btn btn-lg btn-warning" data-toggle="modal" data-target="#OrderGuestModal">As a Guest</button>
+              
+            </form>
+
+          </div>
+          <div class="modal-footer">
+
+            <button type="button" style="width: 100%;" class="btn btn-lg btn-warning" data-toggle="modal" data-target="#OrderLogInModal">As a User (Log In)</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+<!-- Modal Order User -->
+    <div class="modal fade" id="OrderModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+           <h5 class="modal-title" id="exampleModalLabel">Make an Order</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            
+            <form class="Login">
+
+              <div class="form-group">
+                <label ><i class="fa fa-male fa-2x"></i> Name: </label>
+                <input id="OrderName" type="text" name="" class="form-control" value="Antreas Antreou"   readonly="readonly">
+              </div>
+
+        <div class="form-group">
+                <label ><i class="fa fa-map-marker fa-2x"></i> Address: </label>
+                <!-- <input id="Address" type="text" name="" class="form-control" value="Larnakos 158, Aglantzia"   readonly="readonly"> -->
+                <select>
+                  <option valaue="1">Larnakos 158, Aglantzia</option>
+                  <option valaue="1">Kastelorizou 5, Aglantzia</option>
+                  <option valaue="1">Araxovas 2, Aglantzia</option>
+                  <option valaue="1">Pindou 8, Aglantzia</option>
+                </select>
+              </div>
+
+       <div class="form-group">
+                <label ><i class="fa fa-mobile-phone fa-2x"></i> Telephone Number: </label>
+                <input id="ReservationPhone" type="text" name="" class="form-control" value="99999999"   readonly="readonly">
+              </div>
+
+            </form>
+
+          </div>
+          <div class="modal-footer">
+
+            <button type="button" style="width: 100%;" class="btn btn-lg btn-warning">Confirm Order</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+<!-- Modal Order Guest -->
+    <div class="modal fade" id="OrderGuestModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+           <h5 class="modal-title" id="exampleModalLabel">Make an Order as Guest</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            
+            <form class="Login">
+
+              <div class="form-group">
+                <label ><i class="fa fa-male fa-2x"></i> Name: </label>
+                <input id="OrderName" type="text" name="" class="form-control" >
+              </div>
+
+        <div class="form-group">
+                <label ><i class="fa fa-map-marker fa-2x"></i> Address: </label>
+                <input id="OrderAddress" type="text" name="" class="form-control" >
+              </div>
+
+       <div class="form-group">
+                <label ><i class="fa fa-mobile-phone fa-2x"></i> Telephone Number: </label>
+                <input id="ReservationPhone" type="text" name="" class="form-control">
+              </div>
+
+            </form>
+
+          </div>
+          <div class="modal-footer">
+
+            <button type="button" style="width: 100%;" class="btn btn-lg btn-warning">Confirm Order</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!-- Modal Log in Order-->
+    <div class="modal fade" id="OrderLogInModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Log in</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            
+            <form class="login">
+
+              <div class="form-group">
+                <label ><i class="fa fa-envelope fa-2x"></i> Email: </label>
+                <input id="LogInEmail" type="text" name="" class="form-control" >
+              </div>
+
+              <div class="form-group">
+                <label ><i class="fa fa-lock fa-2x"></i> Password: </label>
+                <input id="LogInPassword" type="password" name="" class="form-control" >
+              </div>
+
+            </form>
+
+          </div>
+          <div class="modal-footer">
+
+            <button type="button" style="width: 100%;" class="btn btn-lg btn-warning" data-toggle="modal" data-target="#OrderModal" data-dismiss="modal">Login and procced to Order</button>
+
           </div>
         </div>
       </div>
