@@ -4,11 +4,6 @@ include("elements/header.php");
 
 ?>
 
-
-
-
-
-
 <style>
 .Home_headerimage {
 	margin-bottom: 20px;

@@ -96,7 +96,7 @@ div.signup{
 }
 
 .main_body{
-	padding-top: 115px
+	padding-top: 100px;
 }
 
 
@@ -308,7 +308,7 @@ transition: all 250ms ease-in-out 0s;
 
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 1127px){ /*768*/
 
 	body{
 		overflow-x: hidden;
